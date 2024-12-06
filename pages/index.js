@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
           <button className="bg-teal-700 text-white px-6 py-3 rounded-full">Learn More</button>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
