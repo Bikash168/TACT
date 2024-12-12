@@ -4,12 +4,11 @@ import Layout from '../components/Layout';
 export default function Academics() {
   return (
     <Layout>
-
-
       <Head>
         <title>Academics - Trident Group of Institutions</title>
         <meta name="description" content="Explore a range of academic programs at Trident Academy including engineering, management, biotechnology, and more." />
       </Head>
+
       <div className="bg-gray-50 text-gray-800">
         {/* Hero Section */}
         <section className="bg-teal-800 text-white py-16">
@@ -96,18 +95,35 @@ export default function Academics() {
           </div>
         </section>
 
-        {/* Social Work/Public Health Section */}
-        <section className="bg-teal-800 text-white py-12 px-6 md:px-12">
-          <h2 className="text-3xl font-semibold text-center">Social Work & Public Health</h2>
+        {/* Trident Academy of Creative Technology Section */}
+        <section className="container mx-auto py-12 px-6 md:px-12">
+          <h2 className="text-3xl font-semibold text-teal-800 text-center">Trident Academy of Creative Technology</h2>
+          <p className="mt-6 text-lg text-center">
+            Trident Academy of Creative Technology provides education designed to develop future leaders in today’s evolving world. The institute offers MBA and MCA programs under Biju Pattnaik University of Technology, known for their quality and comprehensive curriculum.
+          </p>
+
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-teal-800">Social Work</h3>
-              <p className="mt-4 text-lg">Courses focused on community development, social welfare, and policy-making.</p>
+              <h3 className="text-2xl font-semibold text-teal-800">Management Programs</h3>
+              <div className="mt-4">
+                <h4 className="text-xl font-semibold text-teal-800">BBA Program</h4>
+                <p className="mt-2 text-lg">
+                  The 4-year BBA program is affiliated with BPUT, covering areas such as leadership, marketing, finance, and entrepreneurship. It combines theoretical learning with practical skills.
+                </p>
+              </div>
+              <div className="mt-4">
+                <h4 className="text-xl font-semibold text-teal-800">MBA Program</h4>
+                <p className="mt-2 text-lg">
+                  The 2-year MBA program is approved by AICTE, affiliated with BPUT, and focuses on nurturing future leaders in business management, preparing students for industry demands.
+                </p>
+              </div>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-teal-800">Public Health</h3>
-              <p className="mt-4 text-lg">Programs related to health management, epidemiology, and healthcare systems.</p>
+              <h3 className="text-2xl font-semibold text-teal-800">MCA Program</h3>
+              <p className="mt-4 text-lg">
+                The MCA program equips students with advanced knowledge in computer applications and technology, providing a comprehensive foundation for a career in IT.
+              </p>
             </div>
           </div>
         </section>

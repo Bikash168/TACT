@@ -7,8 +7,6 @@ import Link from 'next/link';
 export default function About() {
   return (
     <Layout>
-
-
       <Head>
         <title>About - Trident Group of Institutions</title>
         <meta name="description" content="Explore a range of academic programs at Trident Academy including engineering, management, biotechnology, and more." />
@@ -53,6 +51,14 @@ export default function About() {
               Trident Academy of Creative Technology (TACT) is an institution of higher learning, committed to academic excellence and
               a holistic approach to education. Located in Bhubaneswar, Odisha, we offer cutting-edge education in fields such as
               engineering, management, and design, preparing students for success in the modern world.
+            </p>
+            <p className="mt-6 text-lg max-w-3xl mx-auto">
+              Trident Academy of Creative Technology is a well-known name in technical education and is respected for its excellence. 
+              It combines high-quality education with a lively and encouraging learning environment. Since its inception, the Trident 
+              Group of Institutions has gained a strong reputation for providing education that prepares students for real-world challenges.
+              It is a popular choice among students and parents for its focus on practical learning, academic growth, and overall development.
+              At Trident, students get the chance to learn both theory and practical skills, making them ready for successful careers. 
+              The institution’s dedication to quality education has made it a leader in technical education, setting an example for others.
             </p>
           </div>
         </section>
