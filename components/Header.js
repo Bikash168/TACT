@@ -1,5 +1,6 @@
-import { useState } from "react";
-import Link from "next/link";
+import { FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,49 +12,55 @@ export default function Header() {
 
   // Menu items
   const menuItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Academics", href: "/academics" },
-    { name: "Research", href: "/research" },
-    { name: "Activities", href: "/activities" },
-    { name: "Training", href: "/training" },
-    { name: "Placement", href: "/placement" },
-    { name: "Best Practices", href: "/best-practices" },
-    { name: "Facilities", href: "/facilities" },
-    { name: "Admission", href: "/admission" },
-    { name: "Alumni", href: "/alumni" },
-    { name: "Grievance", href: "/grievance" },
-    { name: "Contact", href: "/contact" },
-    { name: "Mandatory Disclosure", href: "/mandatory-disclosure" },
-    { name: "AICTE Approvals", href: "/aicte-approvals" },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Academics', href: '/academics' },
+    { name: 'Research', href: '/research' },
+    { name: 'Activities', href: '/activities' },
+    { name: 'Training', href: '/training' },
+    { name: 'Placement', href: '/placement' },
+    { name: 'Best Practices', href: '/best-practices' },
+    { name: 'Facilities', href: '/facilities' },
+    { name: 'Admission', href: '/admission' },
+    { name: 'Alumni', href: '/alumni' },
+    { name: 'Grievance', href: '/grievance' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Mandatory Disclosure', href: '/mandatory-disclosure' },
+    { name: 'AICTE Approvals', href: '/aicte-approvals' },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
-      {/* Top Bar for Contact and Social Media */}
+      {/* Top Bar for Contact and Social Media with Icons */}
       <div className="bg-teal-800 text-white p-2">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm">
           <div className="flex flex-wrap justify-center sm:justify-start space-x-2 sm:space-x-4 mb-2 sm:mb-0">
             <Link href="tel:+1234567890">
-              <span className="hover:underline">📞 +1234567890</span>
+              <span className="flex items-center space-x-1 hover:underline">
+                <FaPhoneAlt className="text-lg" />
+                <span>+1234567890</span>
+              </span>
             </Link>
             <Link href="mailto:info@tact.edu">
-              <span className="hover:underline">📧 info@tact.edu</span>
+              <span className="flex items-center space-x-1 hover:underline">
+                <FaEnvelope className="text-lg" />
+                <span>info@tact.edu</span>
+              </span>
             </Link>
           </div>
 
           <div className="flex flex-wrap justify-center sm:justify-end space-x-2 sm:space-x-3">
             <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <span className="hover:text-yellow-300">Facebook</span>
+              <FaFacebook className="text-lg hover:text-yellow-300" />
             </Link>
             <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <span className="hover:text-yellow-300">Twitter</span>
+              <FaTwitter className="text-lg hover:text-yellow-300" />
             </Link>
             <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <span className="hover:text-yellow-300">Instagram</span>
+              <FaInstagram className="text-lg hover:text-yellow-300" />
             </Link>
             <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <span className="hover:text-yellow-300">LinkedIn</span>
+              <FaLinkedin className="text-lg hover:text-yellow-300" />
             </Link>
           </div>
         </div>
@@ -93,11 +100,7 @@ export default function Header() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d={
-                  isMenuOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                }
+                d={isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
               />
             </svg>
           </button>
@@ -109,13 +112,14 @@ export default function Header() {
         <div className="container mx-auto flex flex-wrap justify-start items-center gap-1 p-3 overflow-x-auto">
           {menuItems.map((item) => (
             <Link key={item.name} href={item.href}>
-              <span className="bg-white text-teal-800 hover:bg-gray-300 font-semibold text-xs py-1 px-3 rounded shadow-md text-center whitespace-nowrap">
+              <span className="bg-white text-teal-800 hover:bg-gray-300 font-semibold text-xs py-2 px-4 rounded shadow-md text-center whitespace-nowrap">
                 {item.name}
               </span>
             </Link>
           ))}
         </div>
       </div>
+
 
       {/* Mobile Menu */}
       {isMenuOpen && (
